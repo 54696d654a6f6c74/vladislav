@@ -13,7 +13,6 @@ class Settings:
             "except_dir": [],
             "except_path": [],
             "except_filename": [],
-            "cfg_filename": ".vlad_settings"
         }
 
         cfg_path = "vlad_settings.json"
