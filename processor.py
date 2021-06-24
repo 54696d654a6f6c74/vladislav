@@ -32,7 +32,5 @@ def unfold(file) -> str:
                 print(include[1] + " is not a valid path! Ignoring...")
 
         out.write(html[progress:len(html)])
-        print("done")
-        print(html[progress:len(html)])
 
         return out.getvalue()
