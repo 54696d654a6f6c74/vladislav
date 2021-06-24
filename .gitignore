@@ -2,3 +2,6 @@
 __pycache__
 .vlad_watch
 vlad_settings.json
+build
+dist
+vladislav.spec
