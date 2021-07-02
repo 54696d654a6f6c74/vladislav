@@ -1,5 +1,5 @@
 # What is Vladislav?
-A fast, lightweight and configurable html preprocessor inspired by Sergey.
+A fast, lightweight and configurable html preprocessor inspired by [Sergey](https://sergey.cool/).
 
 # Usage
 ### Getting started
