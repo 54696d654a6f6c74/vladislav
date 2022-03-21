@@ -1,7 +1,6 @@
 from os import walk, makedirs
 from os.path import basename
 from settings import settings
-from watcher import get_modified
 from processor import unfold
 
 
@@ -41,6 +40,5 @@ def run(targets: []):
             out.write(unfolded)
 
 
-targets = get_modified(get_files())
 makedirs(settings.data["output_dir"], exist_ok = True)
-run(targets)
+run(get_files())
