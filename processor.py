@@ -7,6 +7,20 @@ from io import StringIO
 regex = compile(r"<!--\s?include(\s\-\w+)?\s+([^\s]*)\s?-->")
 
 
+def get_included(file, includes: list = []) -> list[str]:
+    with open(file, 'r') as html_file:
+        html = html_file.read()
+        matches = regex.finditer(html)
+
+    for incl in matches:
+        if incl.group()[0] is not None and 'r' in incl.group()[0]:
+            includes.append(get_included(incl.group()[1], includes))
+        else:
+            includes.append(incl.group()[1])
+
+    return includes
+
+
 def unfold(file) -> str:
     with open(file, 'r') as html_file:
         html = html_file.read()

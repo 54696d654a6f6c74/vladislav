@@ -5,7 +5,7 @@ from watcher import get_modified
 from processor import unfold
 
 
-def get_files() -> []:
+def get_files() -> list:
     targets = []
 
     for node in walk("./"):
@@ -31,7 +31,7 @@ def get_files() -> []:
     return targets
 
 
-def run(targets: []):
+def run(targets: list):
     for target in targets:
         unfolded = unfold(target)
         filename = ''.join((basename(target).split('.')[:-1]))
